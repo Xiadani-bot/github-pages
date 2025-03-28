@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Restringido</title>
+    <link rel="stylesheet" href="style.css"> <!-- Vinculación del archivo CSS -->
+    <script>
+        function verificarClave() {
+            const claveCorrecta = "123456"; 
+            const claveIngresada = document.getElementById("clave").value;
+
+            if (claveIngresada === claveCorrecta) {
+                window.location.href = "index.html";  // Redirige a la página principal
+            } else {
+                alert("Clave incorrecta. Inténtalo de nuevo.");
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <center>
+    <div id="accessForm"> <!-- El div debe ir en el cuerpo -->
+        <h1>Acceso Restringido</h1>
+        <p>Por favor, ingresa la clave para acceder:</p>
+        <input type="password" id="clave" placeholder="Ingresa la clave">
+        <button onclick="verificarClave()">Acceder</button>
+    </div>
+    </center>
+</body>
+</html>
